@@ -22,7 +22,7 @@ namespace LearnDockerComposeTest
 
             response.StatusCode.Should().Be(HttpStatusCode.OK);
             var data = await response.Content.ReadAsAsync<List<Color>>();
-            data.Should().HaveCount(1);
+            data.Should().HaveCount(0);
         }
     }
 }
