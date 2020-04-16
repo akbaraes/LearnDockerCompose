@@ -50,7 +50,6 @@ namespace LearnDockerCompose
 
             app.UseRouting();
 
-            app.UseAuthorization();
 
             var swaggerOptions = new SwaggerOptions();
 
