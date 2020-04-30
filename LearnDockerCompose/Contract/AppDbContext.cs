@@ -1,4 +1,5 @@
-﻿using Microsoft.EntityFrameworkCore;
+﻿using Catalog.API.Infrastructure.EntityConfigurations;
+using Microsoft.EntityFrameworkCore;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -18,6 +19,10 @@ namespace LearnDockerCompose.Contract
         protected override void OnModelCreating(ModelBuilder modelBuilder)
         {
             base.OnModelCreating(modelBuilder);
+
+            modelBuilder.ApplyConfiguration(new CatalogBrandEntityTypeConfiguration());
+            modelBuilder.ApplyConfiguration(new CatalogTypeEntityTypeConfiguration());
+            modelBuilder.ApplyConfiguration(new CatalogItemEntityTypeConfiguration());
 
             modelBuilder.Entity<Color>().HasData(
                 new Color() { Id = 1, Name = "Red" },

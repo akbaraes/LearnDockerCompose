@@ -19,7 +19,7 @@ namespace LearnDockerCompose.Controllers
             _context = context;
         }
 
-        // GET: api/Colors
+        // GET: api/Colors test production
         [HttpGet("api/Colors")]
         public async Task<ActionResult<IEnumerable<Color>>> GetColors()
         {
