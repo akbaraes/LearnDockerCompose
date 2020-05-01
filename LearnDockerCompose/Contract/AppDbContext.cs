@@ -20,9 +20,9 @@ namespace LearnDockerCompose.Contract
         {
             base.OnModelCreating(modelBuilder);
 
-            modelBuilder.ApplyConfiguration(new CatalogBrandEntityTypeConfiguration());
-            modelBuilder.ApplyConfiguration(new CatalogTypeEntityTypeConfiguration());
-            modelBuilder.ApplyConfiguration(new CatalogItemEntityTypeConfiguration());
+            //modelBuilder.ApplyConfiguration(new CatalogBrandEntityTypeConfiguration());
+            //modelBuilder.ApplyConfiguration(new CatalogTypeEntityTypeConfiguration());
+            //modelBuilder.ApplyConfiguration(new CatalogItemEntityTypeConfiguration());
 
             modelBuilder.Entity<Color>().HasData(
                 new Color() { Id = 1, Name = "Red" },
