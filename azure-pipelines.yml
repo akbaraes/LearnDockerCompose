@@ -21,15 +21,7 @@ steps:
     
 - script: dotnet build --configuration $(buildConfiguration)
   displayName: 'dotnet build $(buildConfiguration)'
-
-- task: efcore-migration-script-generator-task@0
-  inputs:
-    projectpath: '$(Build.SourcesDirectory)/src/LearnDockerCompose/LearnDockerCompose.csproj'
-    databasecontexts: 'AppDbContext'
-    startupprojectpath:'$(Build.SourcesDirectory)/src/
-LearnDockerCompose/LearnDockerCompose.csproj'
-    targetfolder: '$(build.ArtifactStagingDirectory)/migrations'
-    
+  
 - task: DotNetCoreCLI@2
   inputs:
     command: publish
